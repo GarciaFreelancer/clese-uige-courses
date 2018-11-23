@@ -103,6 +103,22 @@
     <li><a href="#initialization">Intialization</a></li>
     <li><a href="#initialization">Intialization2</a></li>
     <li><a href="#initialization">Intialization3</a></li>
+    <li><button class="btnOpenWidgetKamba" onclick="start_payment()"></button></li>
   </ul>
 </div>
 </div>
+
+<script type="text/javascript">
+  function start_payment() {
+    kamba(api_config = {
+  environment: 'sandbox',
+  api_key: 'QSvKtJeNXqv7egCIogAJ9gtt'
+  },
+  checkout_config = { 
+  channel: 'WEB',
+  initial_amount: 10800,
+  notes: 'Curso API Iniciantes',
+  redirect_url_success: 'https://seusite.com/curso/api-iniciantes'
+    });
+  }
+</script>
